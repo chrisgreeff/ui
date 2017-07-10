@@ -1,8 +1,10 @@
 .cui-page-button {
   position: absolute;
-  top: 50%;
   display: inline-block;
+  z-index: 2;
 }
 
-.cui-page-button--prev { left: 10px; }
-.cui-page-button--next { right: 10px; }
+.cui-page-button--prev { top: 50%; left: 10px; }
+.cui-page-button--next { top: 50%; right: 10px; }
+.cui-page-button--prev-sub { left: 50%; top: 10px; }
+.cui-page-button--next-sub { left: 50%; bottom: 10px; }

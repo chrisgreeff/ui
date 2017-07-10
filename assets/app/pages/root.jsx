@@ -1,7 +1,7 @@
 'use strict'
 
 import React from 'react'
-import CuiPageInput from './input.jsx'
+import CuiPageInput from './input/index.jsx'
 
 
 export default class CuiPageRoot extends React.Component {
