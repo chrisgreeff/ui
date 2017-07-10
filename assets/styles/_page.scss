@@ -1,0 +1,22 @@
+.cui-pages,
+.cui-page {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  transition: left ease-in-out 0.5s;
+}
+
+.cui-page {
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin cui-page($pageNumber, $position) {
+  .cui-page--#{$pageNumber} { left: #{$position}vw; top: -#{$position}vh; }
+}
+
+@include cui-page(1, 0);
+@include cui-page(2, 100);
+@include cui-page(3, 200);

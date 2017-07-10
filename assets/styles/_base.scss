@@ -1,7 +1,11 @@
 html,
-body {
+body,
+#cui-app,
+.cui-main-content {
   padding: 0;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   height: 100%;
+  background-color: $cui-colour-background;
+  overflow: hidden;
 }

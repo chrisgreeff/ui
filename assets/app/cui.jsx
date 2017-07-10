@@ -3,6 +3,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
+import CuiPageRoot from './pages/root.jsx'
+
 ReactDOM.render((
-  <div>Hai</div>
-), document.getElementById('app'))
+  <CuiPageRoot />
+), document.getElementById('cui-app'))
