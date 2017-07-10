@@ -8,23 +8,29 @@ export default class CuiPageRoot extends React.Component {
   constructor (props) {
     super(props)
 
+    this.state = {
+      left: 0
+    }
+
     this.goPrevPage = this.goPrevPage.bind(this)
     this.goNextPage = this.goNextPage.bind(this)
   }
 
   goNextPage () {
-    console.log('next')
+    this.setState({ left: this.state.left - 100 })
   }
 
   goPrevPage () {
-    console.log('prev')
+    this.setState({ left: this.state.left + 100 })
   }
 
   render () {
+    const { left } = this.state
+
     return (
       <div className='cui-main-content'>
         <button className='cui-page-button cui-page-button--prev' onClick={this.goPrevPage}>Prev</button>
-        <div className='cui-pages'>
+        <div className='cui-pages' style={{left: `${left}vw`}}>
           <CuiPageInput className='cui-page--1' />
           <CuiPageInput className='cui-page--2' />
           <CuiPageInput className='cui-page--3' />
