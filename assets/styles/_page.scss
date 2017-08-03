@@ -1,22 +1,30 @@
 .cui-pages,
-.cui-page {
-  position: relative;
+.cui-sub-pages,
+.cui-page,
+.cui-sub-page {
+  position: absolute;
   width: 100vw;
   height: 100vh;
-  transition: left ease-in-out 0.5s;
+  transition-property: left, top;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.5s;
 }
 
-.cui-page {
-  top: 0;
+.cui-page,
+.cui-sub-page {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-@mixin cui-page($pageNumber, $position) {
-  .cui-page--#{$pageNumber} { left: #{$position}vw; top: -#{$position}vh; }
+.cui-page { top: 0; }
+
+@mixin cui-page($pageNumber) {
+  .cui-page--#{$pageNumber} { left: #{($pageNumber - 1) * 100}vw; }
+  .cui-sub-page--#{$pageNumber} { top: #{($pageNumber - 1) * 100}vh; }
 }
 
-@include cui-page(1, 0);
-@include cui-page(2, 100);
-@include cui-page(3, 200);
+
+@include cui-page(1);
+@include cui-page(2);
+@include cui-page(3);

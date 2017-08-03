@@ -43,7 +43,6 @@ export default class CuiPageInput extends React.Component {
         <div className='cui-sub-pages' style={{top: `${top}vh`}}>
           <CuiPageInputBasic className='cui-sub-page--1' />
           <CuiPageInputBasic className='cui-sub-page--2' />
-          <CuiPageInputBasic className='cui-sub-page--3' />
         </div>
         <button className='cui-page-button cui-page-button--next-sub'
           onClick={this.goNextSubPage}
