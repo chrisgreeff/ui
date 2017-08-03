@@ -1,10 +1,32 @@
+$cui-page-button-width: 50px;
+
 .cui-page-button {
   position: absolute;
   display: inline-block;
   z-index: 2;
+  width: $cui-page-button-width;
+  height: $cui-page-button-width;
+  border-radius: $cui-page-button-width;
+  border: none;
+  background: none;
+  color: $cui-colour-supplementary;
+  outline: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+
+  &:hover { color: darken($cui-colour-supplementary, 10%); }
+
+  &.disabled,
+  &:disabled,
+  &[disabled] {
+    opacity: 0.5;
+    pointer-events: none;
+  }
 }
 
-.cui-page-button--prev { top: 50%; left: 10px; }
-.cui-page-button--next { top: 50%; right: 10px; }
-.cui-page-button--prev-sub { left: 50%; top: 10px; }
-.cui-page-button--next-sub { left: 50%; bottom: 10px; }
+.cui-page-button--prev { top: calc(50% - #{$cui-page-button-width / 2}); left: 10px; }
+.cui-page-button--next { top: calc(50% - #{$cui-page-button-width / 2}); right: 10px; }
+.cui-page-button--prev-sub { left: calc(50% - #{$cui-page-button-width / 2}); top: 10px; }
+.cui-page-button--next-sub { left: calc(50% - #{$cui-page-button-width / 2}); bottom: 10px; }

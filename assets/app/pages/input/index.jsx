@@ -38,7 +38,7 @@ export default class CuiPageInput extends React.Component {
         <button className='cui-page-button cui-page-button--prev-sub'
           onClick={this.goPrevSubPage}
           disabled={currentPage === 1}>
-          Prev
+          <i className="fa fa-chevron-up" />
         </button>
         <div className='cui-sub-pages' style={{top: `${top}vh`}}>
           <CuiPageInputBasic className='cui-sub-page--1' />
@@ -47,7 +47,7 @@ export default class CuiPageInput extends React.Component {
         <button className='cui-page-button cui-page-button--next-sub'
           onClick={this.goNextSubPage}
           disabled={currentPage === pages}>
-          Next
+          <i className="fa fa-chevron-down" />
         </button>
       </div>
     )
